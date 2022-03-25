@@ -1,0 +1,11 @@
+pipeline{
+    agent any
+    stages{
+        stage("welcome"){
+            steps{
+                echo "welcome to ci/cd pipeline"
+                sh 'touch a.txt'
+            }
+        }
+    }
+}
