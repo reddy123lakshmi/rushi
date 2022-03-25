@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("welcome"){
             steps{
-               git credentialsId: 'github', url: 'https://github.com/reddy123lakshmi/rushi.git'
+               git credentialsId: 'lakshm', url: 'https://github.com/reddy123lakshmi/rushi.git'
             }
         }
     }
