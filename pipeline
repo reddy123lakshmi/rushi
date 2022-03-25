@@ -1,9 +1,9 @@
 pipeline{
     agent any
     stages{
-        stage("welcome"){
+        stage("git checkout"){
             steps{
-                   git credentialsId: 'github', url: 'https://github.com/reddy123lakshmi/rushi.git'
+                git credentialsId: 'github', url: 'https://github.com/javahometech/myweb'
             }
         }
     }
