@@ -1,0 +1,36 @@
+For Stage:
+connect to Stage Jump Server using session manager:
+1.sudo su
+2.cd /home/ubuntu
+3.cd key
+4.lss
+5.ssh -i stage-app-instances.pem ubuntu@<instance ip address>
+6.docker ps (for checking the running containers)
+7.cd /opt/app
+8.docker stop <container-id> (stop the container before deploying)
+9.Deploying Service:
+    command: ./deploy_script.sh <service name>
+10. To check service logs
+ command:docker logs <container-id>
+  
+  
+For Production:
+connect to prod jump server:
+   ssh -i prod-key.pem ubuntu@15.207.123.186
+   
+1.sudo su
+2.cd /home/ubuntu
+3.cd key
+4.ls
+5.ssh -i prod-ec2.pem ubuntu@<instance ip address>
+6.docker ps (for checking the running containers)
+7.cd /opt/app
+8.docker stop <container-id> (stop the container before deploying)
+9.  Deploying Service:
+    command: ./deploy_script.sh <service name>
+10.docker ps
+11. To check service logs
+ command:docker logs <container-id>
+
+		   
+
