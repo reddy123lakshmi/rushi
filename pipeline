@@ -3,8 +3,7 @@ pipeline{
     stages{
         stage("welcome"){
             steps{
-                echo "welcome to ci/cd pipeline"
-                sh 'touch a.txt'
+               git credentialsId: 'github', url: 'https://github.com/reddy123lakshmi/rushi.git'
             }
         }
     }
