@@ -5,9 +5,13 @@ pipeline{
             steps{
                 git credentialsId: 'github', url: 'https://github.com/javahometech/myweb'
             }
-            steps{
-               sh 'java -version'
+           
             }
-        }
+          stage("java version"){
+            steps{
+                sh 'java -version'
+           
+            }
+        
     }
 }
